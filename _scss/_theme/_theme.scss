@@ -1,0 +1,72 @@
+/* TEMAS */
+
+// ================================================================
+// CORES
+// ================================================================
+$color-1: #fff; // branco
+$color-2: #58595b; // cinza escuro
+$color-3: #004f9f; // azul
+$color-4: #e30613; // vermelho
+$color-5: #b4050c; // vermelho escuro
+$color-6: #e6e7e8; // cinza claro
+$color-7: darken($color-3, 10%); // azul escuro
+
+// azul claro (para interações)
+$brand-1: #0970e6;
+
+// azul escuro (marca)
+$brand-2: #095ba5;
+// vermelho (marca)
+$brand-3: #db3832;
+
+// azul noite (fonte)
+$brand-4: #0e3368;
+// cinza escuro (fonte)
+$brand-5: #575757;
+
+
+// ================================================================
+// URLs
+// ================================================================
+$local: "..";
+$web: "https://static.carrefour.com.br/imagens/localizador";
+
+$url: $local;
+
+@function getUrl($path){
+	@return url( $url + $path );
+}
+
+
+// ================================================================
+// FONTES
+// ================================================================
+
+@font-face {
+	font-family: GothamRoundedMedium;
+	src: getUrl("/_font/GothamRnd-Medium.otf");
+}
+
+@font-face {
+	font-family: GothamRoundedLight;
+	src: getUrl("/_font/GothamRnd-Light.otf");
+}
+
+$font1: GothamRoundedMedium;
+$font2: GothamRoundedLight;
+
+.font-small { font-size: 10px; }
+
+// ================================================================
+// RESOLUÇÕES DE TELA
+// ================================================================
+$width-desktop: 1170px;
+$width-tablet: 768px;
+$width-mobile: 660px;
+
+
+// ================================================================
+// TAMANHOS
+// ================================================================
+$input-height: 35px;
+$button-height: $input-height;

@@ -1,0 +1,169 @@
+/**
+ * FILTER
+ */
+
+.localizador__ui__filter {
+	width: 100%;
+	max-width: 320px;
+
+	@media all and (max-width: $width-mobile){
+		padding-top: 10px;
+	}
+
+	&.is--open {
+		padding-bottom: 10px;
+	}
+
+	&--header {
+		height: 40px;
+		position: relative;
+
+		display: none;
+
+		@media all and (max-width: 1110px){
+			display: none;
+		}
+
+		&:before {
+			content: '';
+			background: $color-1;
+			display: block;
+			width: 100%; height: 1px;
+			position: absolute;
+			top: 50%; left: 0;
+		}
+
+		span {
+			color: $color-1;
+			font-size: 10px;
+			text-align: center;
+
+			display: block;
+			background: $color-3;
+			padding: 5px 10px;
+
+			position: absolute;
+			top: 50%; left: 50%;
+			transform: translate(-50%, -50%);
+			width: 190px;
+		}
+
+	}
+
+}
+
+.localizador__ui__filtros {
+	ul {
+		margin-bottom: 0;
+	}
+}
+
+.localizador__ui__filtro {
+	display: inline-block;
+	position: relative;
+	list-style: none;
+	text-align: center;
+
+	&:not(:last-of-type){
+		margin-right: 7px;
+	}
+
+	// linha horizontal
+	&:before {
+		background: $color-6;
+		content: '';
+		display: none;
+		width: calc(100% - 40px); height: 1px;
+
+		position: absolute;
+		top: 50%; left: 0; z-index: 1;
+		margin-top: -1px;
+	}
+
+	&:after {
+		content: '';
+		clear: both;
+		display: block;
+	}
+
+	label {
+		// background: $color-1;
+		display: inline-block;
+		padding: 0px;
+
+		position: relative;
+		z-index: 2;
+
+		font-family: $font2;
+		font-size: 12px;
+		margin-bottom: 0;
+
+		// ÍCONES DAS LOJAS
+		&:before {
+			content: '';
+			display: block;
+			margin: 0 auto 25px;
+			vertical-align: middle;
+			width: 30px; height: 55px;
+
+			@media all and (max-width: $width-mobile/2){
+				width: 20px;
+				height: 30px;
+			}
+		}
+
+		$categorias: express, bairro, market, hiper, drogaria, posto;
+		@for $i from 1 through length($categorias){
+
+			$current: nth($categorias, $i);
+			&[for="filtro_#{$current}"]{
+				&:before {
+					// background: $color-1 getUrl("/_img/pin_#{$current}.png") no-repeat;
+					background: getUrl("/_img/pin_#{$current}.png") no-repeat;
+					background-size: contain;
+					padding: 5px;
+				}
+			}
+
+		}
+
+	}
+
+}
+
+
+.localizador__ui__checkbox {
+	background: $color-1;
+	// border: 1px solid $color-1;
+
+	position: absolute;
+	left: 50%; bottom: 25px;
+	z-index: 2;
+
+	@media all and (max-width: $width-mobile){
+		bottom: 20px;
+	}
+
+	margin-left: -10px;
+	width: 20px; height: 20px;
+
+	input {
+		width: 100%; height: 100%;
+		position: absolute;
+		top: 0; left: 0; z-index: 3;
+		cursor: pointer;
+		opacity: 0;
+	}
+
+	&--check {
+		width: 100%; height: 100%;
+		position: absolute;
+		top: 0; left: 0; z-index: 2;
+	}
+
+	input:checked + &--check {
+		background: getUrl("/_img/check.png") center center no-repeat;
+		background-size: 70%;
+	}
+
+}

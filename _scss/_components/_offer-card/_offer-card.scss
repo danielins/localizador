@@ -1,0 +1,57 @@
+.offer-card {
+	padding-top: 20px;
+	min-height: 550px;
+	vertical-align: top;
+
+	&--store {
+		display: block;
+		margin: 0 auto;
+	}
+
+	&--cover {
+		margin: 0 auto;
+		line-height: 300px;
+		text-align: center;
+		width: 90%; height: 260px;
+
+		img {
+			display: inline-block;
+			max-width: 90%;
+			box-shadow: 1px 1px 30px 0px #555;
+			width: auto; height: 100%;
+			transition: all .25s ease-in-out;
+			&:hover {
+				box-shadow: 1px 1px 30px 0px #000;
+			}
+		}
+
+		figcaption {
+			text-align: center;
+			width: 100%;
+		}
+
+	}
+
+	&--date {
+		margin: 40px 0 20px;
+		text-align: center;
+	}
+
+	.store-card__text,
+	.store-card__title {
+		padding: 0 15px;
+	}
+
+	.store-card__title {
+		margin-bottom: 5px;
+		font-size: 18px;
+		min-height: 0 !important;
+	}
+
+	.store-card__text {
+		font-size: 12px;
+		min-height: 80px;
+		margin-bottom: 0;
+	}
+
+}

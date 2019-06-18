@@ -1,0 +1,21 @@
+.offer {
+
+	&__list {
+		padding-top: 10px;
+	}
+
+	&__item {
+		list-style-type: none;
+		margin-bottom: 5px;
+	}
+
+	&__link {
+		color: $color-3;
+		text-decoration: none;
+		&:hover {
+			color: lighten($color-3, 10%);
+			text-decoration: underline;
+		}
+	}
+
+}

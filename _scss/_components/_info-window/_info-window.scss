@@ -1,0 +1,43 @@
+/**
+ * INFO-WINDOW
+ */
+
+.info-window {
+
+	&__title {
+		color: $color-3;
+		font-size: 25px;
+	}
+
+	&__text {
+		font-size: 16px;
+
+		&--description {
+			border-top: 1px solid;
+			font-style: italic;
+			font-size: 12px;
+			margin-top: 5px;
+			padding-top: 5px;
+		}
+
+	}
+
+	&__button {
+		background: $color-6;
+		height: $button-height;
+		margin-top: 10px;
+	}
+
+	&__double-button {
+		button {
+			width: 49%;
+			&:first-of-type {
+				margin-right: 1%;
+			}
+			&:last-of-type {
+				margin-left: 1%;
+			}
+		}
+	}
+
+}

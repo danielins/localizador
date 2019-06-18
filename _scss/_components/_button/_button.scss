@@ -1,0 +1,104 @@
+button, .bt {
+	cursor: pointer;
+	min-height: 20px;
+	padding: 0 5px;
+
+	text-align: center;
+	text-decoration: none;
+
+	font-family: $font1;
+
+	&:hover {
+		text-decoration: none !important;
+	}
+
+
+	&.bt-theme--1 {
+		background: $color-3;
+		color: $color-1;
+		transition: all .2s ease-in-out;
+		&:hover {
+			background: darken($color-3, 7%);
+		}
+	}
+
+	&.bt-theme--2 {
+		background: $color-6;
+		color: $color-2;
+		transition: all .2s ease-in-out;
+		&:hover {
+			background: darken($color-6, 7%);
+		}
+	}
+
+	&.bt-theme--3 {
+		color: $color-1;
+		background: $color-4;
+		transition: all .2s ease-in-out;
+		&:hover {
+			background-color: $color-5;
+		}
+	}
+
+	&.bt-theme--4 {
+		background: $brand-1;
+		color: $color-1;
+		transition: all .2s ease-in-out;
+		&:hover {
+			background: darken($brand-1, 7%);
+		}
+	}
+
+	&.bt-theme--5 {
+		color: $brand-1;
+		backgorund: $color-1;
+		border: 1px solid;
+		transition: all .2s ease-in-out;
+		&:hover {
+			color: darken($brand-1, 7%);
+		}
+	}
+
+	&.bt-wide {
+		width: 100%;
+		height: $button-height;
+		line-height: $button-height;
+	}
+
+	&.bt-half {
+		display: inline-block;
+		width: 48%;
+		height: $button-height;
+		line-height: $button-height;
+		&:not(:last-of-type){
+			margin-right: 2%;
+		}
+	}
+
+	&.bt-max {
+		max-width: 150px;
+	}
+
+	&.bt-filter {
+		background-image: getUrl('/_img/bg-bt-filtros.png');
+		background-position: top right;
+		background-repeat: no-repeat;
+		font-size: 14px;
+		text-align: left;
+
+		width: 55%; height: 35px;
+		position: absolute;
+		top: 100%; left: 50%;
+		transform: translateX(-50%);
+
+		padding: 0 50px 0 10px;
+
+		@media all and (max-width: $width-mobile){
+			position: static;
+			transform: none;
+			margin-bottom: 10px;
+			width: calc(100% - 20px);
+		}
+	}
+
+}

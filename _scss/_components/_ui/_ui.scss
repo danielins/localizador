@@ -1,0 +1,54 @@
+.localizador__ui {
+	background: $color-3;
+	color: $color-1;
+
+	position: static;
+	top: 0; left: 0; z-index: 9;
+	width: 100%;
+
+	font-size: 0;
+	text-align: center;
+
+	padding: 15px 5px;
+
+	&--offer {
+		min-height: 100px;
+
+		@media all and (min-width: 661px){
+			padding: 15px 0;
+		}
+
+		.localizador__header {
+			margin-right: 30px;
+		}
+	}
+
+	@media all and (max-width: 1110px){
+		text-align: center;
+
+		// Mecanismo de toggle
+		overflow: hidden;
+		max-height: 150px;
+
+		&--offer {
+			max-height: 130px;
+			padding-top: 15px;
+		}
+
+		transition: all .5s ease-in-out;
+
+		&.isOpen {
+			max-height: 500px;
+		}
+
+	}
+
+	@media all and (max-width: $width-mobile){
+		max-height: 110px;
+	}
+
+	@media all and (max-width: $width-mobile/2){
+		max-height: 110px;
+	}
+
+}

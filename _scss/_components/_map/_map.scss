@@ -1,0 +1,16 @@
+.localizador__mapa {
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%; min-height: 600px;
+
+	@media all and (max-width: $width-mobile){
+		position: static;
+		max-width: none;
+		text-align: center;
+	}
+}
+
+.mapa {
+	background: #ccc;
+	width: 100%; min-height: 600px;
+}
